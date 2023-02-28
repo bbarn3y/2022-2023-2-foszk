@@ -2,4 +2,7 @@
 
 ## 1. gyakorlat
 
-...
+- JS alapok
+- Típusok
+- Vezérlési szerkezetek
+- filter
