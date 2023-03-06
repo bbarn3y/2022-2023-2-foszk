@@ -68,5 +68,25 @@ function getEvenNumbers2(tomb) {
 
 console.log(getEvenNumbers2(tomb));
 
-const evenNumbers = tomb.filter((element) => element % 2 === 0);
+function filterNumbers(tomb, filterFn) {
+    let result = [];
+    for (const element of tomb) {
+        if (filterFn(element)) {
+            result.push(element);
+        }
+    }
+    return result;
+}
+
+console.log('Negative numbers: ', filterNumbers(tomb, function (elem) {
+    return elem < 0;
+}));
+
+console.log('Positive numbers: ', filterNumbers(tomb, (item) => {
+    return item > 0;
+}));
+
+console.log('Positive numbers: ', filterNumbers(tomb, (number) => number > 0));
+
+const evenNumbers = tomb.filter((num) => num % 2 === 0);
 console.log(evenNumbers)
