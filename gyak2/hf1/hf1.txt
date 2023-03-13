@@ -8,15 +8,4 @@
     1.7 Melyik érdeklődési kör szerepel a legtöbb személynél?
     1.8 A fenti feladatok eredményét írasd ki console-ra.
 
-2. DOM manipuláció (1 pont)
-    2.1 Készíts egy űrlapot 3 mezővel: név (szöveges), kor (szám), nem (választó).
-    2.2 Az űrlap alá kerüljön egy gomb, amellyel az űrlap ellenőrizhető.
-    2.3 Mindhárom mező legyen kötelező.
-        Ha egy mező értéke üres ellenőrzéskor, akkor ezt stílusában jelöljük (például a mező szélei változzanak pirosra).
-    2.4 A kor mező akkor is számítson hibásnak, ha az értéke negatív, vagy ha nagyobb, mint 110.
-    2.5 Amennyiben az űrlap nem tartalmaz hibát, az oldal háttérszíne változzon zöld-re ellenőrzéskor.
-    2.6 Amennyiben az űrlap nem tartalmaz hibát, a korábbi esetleges hibajelölések tűnjenek el, valamint a felhasználó
-        kapjon egy felugró üzenetet: "Minden rendben!".
-        (Segítség: felugró üzenethez az 'alert' parancsot tudjátok használni.)
-
 A házi feladat eredményét a "babuafi@inf.elte.hu" e-mail címre küldjétek el.

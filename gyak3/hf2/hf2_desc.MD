@@ -1,6 +1,8 @@
-# Webprogramozás 2022-2023-2 HF2 (1 pont)
+# Webprogramozás 2022-2023-2 HF2
 
-## 1. feladat
+A házi feladat eredményét a "babuafi@inf.elte.hu" e-mail címre küldjétek el.
+
+## 1. feladat (0.5 pont)
 
 Adott egy tömb 2022-es játékokkal és azok adataival.
 
@@ -36,7 +38,7 @@ elért játékok szerepelnek.**
 
 1.5 **Keresd meg a maximális pontszámot.**
 
-## 2. feladat
+## 2. feladat (0.5 pont)
 
 A felületen két gombot találsz, egy feketét és egy fehéret.
 
@@ -54,4 +56,21 @@ a lista elejére kerüljön.**
 1.4 **Az oldalon kattintva kiírjuk konzolra a klikk pozícióját.
 Ez ne történjen meg amennyiben a fekete négyzetekre kattint,
 minden más esetben viszont megjelenhet továbbra is.**
+
+## 3. feladat (1 pont)
+
+3.1 Készíts egy űrlapot 3 mezővel: név (szöveges), kor (szám), nem (választó). 
+
+3.2 Az űrlap alá kerüljön egy gomb, amellyel az űrlap ellenőrizhető.
+
+3.3 Mindhárom mező legyen kötelező.
+    Ha egy mező értéke üres ellenőrzéskor, akkor ezt stílusában jelöljük (például a mező szélei változzanak pirosra).
+
+3.4 A kor mező akkor is számítson hibásnak, ha az értéke negatív, vagy ha nagyobb, mint 110.
+
+3.5 Amennyiben az űrlap nem tartalmaz hibát, az oldal háttérszíne változzon zöld-re ellenőrzéskor.
+
+3.6 Amennyiben az űrlap nem tartalmaz hibát, a korábbi esetleges hibajelölések tűnjenek el, valamint a felhasználó
+    kapjon egy felugró üzenetet: "Minden rendben!".
+    (Segítség: felugró üzenethez az 'alert' parancsot tudjátok használni.)
 
