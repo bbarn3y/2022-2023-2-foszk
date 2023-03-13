@@ -42,18 +42,18 @@ elért játékok szerepelnek.**
 
 A felületen két gombot találsz, egy feketét és egy fehéret.
 
-1.1 **Gombnyomásra a "container" id-val rendelkező elembe szúrj be két fekete vagy két fehér
+2.1 **Gombnyomásra a "container" id-val rendelkező elembe szúrj be két fekete vagy két fehér
 négyzetet, attól függően, hogy melyik gomb lett megnyomva.**
 
 Ehhez használhatod a CSS-ben előre definiált "rectangle", "black" és "white" osztályokat.
 
-1.2 **A beszúrt négyzet ne írja felül a konténer tartalmát, hanem mindig új elemként
+2.2 **A beszúrt négyzet ne írja felül a konténer tartalmát, hanem mindig új elemként
 a lista elejére kerüljön.**
 
-1.3 **Bármelyik négyzetre kattintva kapjon egy üzenetet (alert) a felhasználó, hogy az milyen színű
+2.3 **Bármelyik négyzetre kattintva kapjon egy üzenetet (alert) a felhasználó, hogy az milyen színű
 (fekete vagy fehér).**
 
-1.4 **Az oldalon kattintva kiírjuk konzolra a klikk pozícióját.
+2.4 **Az oldalon kattintva kiírjuk konzolra a klikk pozícióját.
 Ez ne történjen meg amennyiben a fekete négyzetekre kattint,
 minden más esetben viszont megjelenhet továbbra is.**
 
