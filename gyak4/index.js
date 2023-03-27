@@ -44,5 +44,37 @@ form.addEventListener('submit', (event) => {
   }, 0)
 
   console.log('matchingLetterCount', matchingLetterCount);
+
+  // tableGuesses.innerHTML = `<tr class="correct">
+  //       <td>${guess}</td>
+  //       <td>${matchingLetterCount}</td>
+  //   </tr>` + tableGuesses.innerHTML;
+
+  const rowEl = document.createElement('tr');
+  rowEl.classList.add('correct');
+  const titleCellEl = document.createElement('td');
+  titleCellEl.innerText = guess;
+  const countCellEl = document.createElement('td');
+  countCellEl.innerText = `${matchingLetterCount}`;
+  rowEl.appendChild(titleCellEl);
+  rowEl.appendChild(countCellEl);
+  tableGuesses.prepend(rowEl);
+
+  divEndOfGame.removeAttribute('hidden');
+
+  btnRestart.addEventListener('click', (e) => {
+    location.reload();
+  })
 })
+
+
+
+
+
+
+
+
+
+
+
 
