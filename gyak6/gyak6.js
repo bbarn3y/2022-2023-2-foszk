@@ -110,6 +110,12 @@ function update(dt) {
     columns.forEach((column) => {
         column.update(dt);
     })
+
+    if (columns[columns.length - 1].x <= canvas.width - columnDistance) {
+        createColumns();
+    }
+
+    // @todo Remove old columns
 }
 
 cycle();
