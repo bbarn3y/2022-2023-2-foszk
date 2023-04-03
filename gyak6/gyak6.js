@@ -59,6 +59,8 @@ const context = canvas.getContext('2d');
 const bird = new Bird(context, 50, 200, 50, 50, 10, 100);
 const columns = [];
 
+let gameOver = false;
+
 const columnGap = 200;
 const columnDistance = 250;
 
@@ -80,7 +82,9 @@ function cycle(now = performance.now()) {
     update(dt);
     draw();
 
-    requestAnimationFrame(cycle);
+    if (!gameOver) {
+        requestAnimationFrame(cycle);
+    }
 }
 
 function draw() {
@@ -102,6 +106,12 @@ function draw() {
     columns.forEach((column) => {
         column.draw();
     })
+
+    if (gameOver) {
+        context.font = '50px Arial';
+        context.fillStyle = 'black';
+        context.fillText('Game Over!', canvas.width / 2 - 10, canvas.height / 2);
+    }
 }
 
 function update(dt) {
@@ -116,6 +126,18 @@ function update(dt) {
     }
 
     // @todo Remove old columns
+
+    // if (columns.some((column) => rectanglesCollide(bird, column))) {
+    //     gameOver = true;
+    // }
+    gameOver = columns.some((column) => rectanglesCollide(bird, column));
+}
+
+function rectanglesCollide(a, b) {
+    return a.x < b.x + b.width &&
+        a.x + a.width > b.x &&
+        a.y < b.y + b.height &&
+        a.y + a.height > b.y;
 }
 
 cycle();
