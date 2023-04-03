@@ -20,6 +20,12 @@ class Bird {
     }
 }
 
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'Space') {
+        bird.velocity -= 100;
+    }
+});
+
 function random(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a;
 }
