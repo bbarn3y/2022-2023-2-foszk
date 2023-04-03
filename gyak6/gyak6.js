@@ -13,6 +13,11 @@ class Bird {
         context.fillStyle = 'gray';
         context.fillRect(this.x, this.y, this.width, this.height);
     }
+
+    update(dt) {
+        this.velocity += this.acceleration * dt / 1000;
+        this.y += this.velocity * dt / 1000;
+    }
 }
 
 function random(a, b) {
@@ -23,6 +28,17 @@ const canvas = document.getElementById('flappyCanvas');
 const context = canvas.getContext('2d');
 
 const bird = new Bird(context, 50, 200, 50, 50, 10, 100);
+
+let previousTime = performance.now();
+function cycle(now = performance.now()) {
+    const dt = now - previousTime;
+    previousTime = now;
+
+    update(dt);
+    draw();
+
+    requestAnimationFrame(cycle);
+}
 
 function draw() {
     console.log('draw');
@@ -42,5 +58,9 @@ function draw() {
     bird.draw();
 }
 
-draw();
+function update(dt) {
+    bird.update(dt);
+}
+
+cycle();
 
