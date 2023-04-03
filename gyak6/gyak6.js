@@ -1,4 +1,5 @@
 class Bird {
+    image;
     constructor(context, x, y, width, height, velocity, acceleration) {
         this.context = context
         this.x = x;
@@ -7,11 +8,14 @@ class Bird {
         this.height = height;
         this.velocity = velocity;
         this.acceleration = acceleration;
+        this.image = new Image();
+        this.image.src = './assets/bird.png';
     }
 
     draw() {
-        context.fillStyle = 'gray';
-        context.fillRect(this.x, this.y, this.width, this.height);
+        // context.fillStyle = 'gray';
+        // context.fillRect(this.x, this.y, this.width, this.height);
+        context.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
 
     update(dt) {
@@ -47,7 +51,6 @@ function cycle(now = performance.now()) {
 }
 
 function draw() {
-    console.log('draw');
     context.fillStyle = 'aqua';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
