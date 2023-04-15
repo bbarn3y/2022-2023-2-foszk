@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Form -->
+    <form id="form">
+
+        <label for="title">Title</label>
+        <input id="title" type="text" required minlength="3"/>
+
+        <label for="protagonist">Protagonist</label>
+        <input id="protagonist" type="text" required pattern="^[a-zA-Z]+ [a-zA-Z]+$"/>
+
+        <label for="availableInCinemas">Available in cinemas</label>
+        <select id="availableInCinemas">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+
+        <label for="next">Next</label>
+        <input id="next" type="date"/>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script src="form.js"></script>
+    </body>
+</html>
