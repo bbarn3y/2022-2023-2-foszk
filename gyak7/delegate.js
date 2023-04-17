@@ -8,7 +8,10 @@ const task8El = document.getElementById('task8');
 const task9EL = document.getElementById('task9');
 const tasksEl = document.getElementById('tasks');
 
-selectedNumbers = [];
+let selectedGame;
+let rows = 0;
+let columns = 0;
+let selectedNumbers = [];
 
 function delegate(parent, type, selector, handler) {
     parent.addEventListener(type, function (event) {
@@ -29,4 +32,38 @@ function drawLottery(n){
     return draw.sort((u, v) => u - v)
 }
 
+function generateTable(rowCount, columnCount) {
+    let html = '';
+    for (let i = 0; i < rowCount; i++) {
+        html += '<tr>';
+        for (let j = 0; j < columnCount; j++) {
+            html += `<td>${i * columnCount + j + 1}</td>`;
+        }
+        html += '</tr>'
+    }
+    tableEl.innerHTML = html;
+}
 
+newEl.addEventListener('click', (event) => {
+    newEl.setAttribute('disabled', '');
+    selectEl.setAttribute('disabled', '');
+
+    selectedGame = selectEl.value;
+    switch (selectedGame) {
+        case '5':
+            rows = 10;
+            columns = 9;
+            break;
+        case '6':
+            rows = 5;
+            columns = 9;
+            break;
+        case '7':
+            rows = 5;
+            columns = 7;
+            break;
+    }
+    generateTable(rows, columns);
+});
+
+delegate()
