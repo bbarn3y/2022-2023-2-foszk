@@ -12,6 +12,7 @@ let selectedGame;
 let rows = 0;
 let columns = 0;
 let selectedNumbers = [];
+let winningNumbers;
 
 function delegate(parent, type, selector, handler) {
     parent.addEventListener(type, function (event) {
@@ -73,6 +74,9 @@ delegate(tableEl, 'click', 'td', function (event) {
         selectedNumbers.splice(selectedIndex, 1);
         this.classList.remove('played');
     } else {
+        if (selectedNumbers.length === +selectedGame) {
+            return;
+        }
         selectedNumbers.push(selectedValue);
         this.classList.add('played');
     }
@@ -82,4 +86,27 @@ delegate(tableEl, 'click', 'td', function (event) {
     } else {
         tasksEl.style.display = 'none';
     }
+})
+
+drawEl.addEventListener('click', (event) => {
+    winningNumbers = drawLottery(selectedGame);
+    task6El.innerText = winningNumbers.join(', ');
+
+    const matchingNumbers = winningNumbers.filter((winningNumber) => {
+        return selectedNumbers.includes(winningNumber)
+    });
+    task7El.innerText = matchingNumbers.length;
+
+    const joinedNumbers = winningNumbers.join('');
+    const numbersArray = joinedNumbers.split('');
+    const sum = numbersArray.reduce((partialResult, number) => {
+        return partialResult + +number;
+    }, 0);
+    task8El.innerText = sum;
+
+    const containsSquare = winningNumbers.some((winningNumber) => {
+        const squaredNumber = winningNumber * winningNumber; // Math.pow(number, 2)
+        return winningNumbers.includes(squaredNumber)
+    })
+    task9EL.innerText = containsSquare;
 })
