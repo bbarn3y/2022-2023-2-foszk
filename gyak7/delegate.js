@@ -66,4 +66,20 @@ newEl.addEventListener('click', (event) => {
     generateTable(rows, columns);
 });
 
-delegate()
+delegate(tableEl, 'click', 'td', function (event) {
+    const selectedValue = +this.innerText;
+    if (selectedNumbers.includes(selectedValue)) {
+        const selectedIndex = selectedNumbers.indexOf(selectedValue);
+        selectedNumbers.splice(selectedIndex, 1);
+        this.classList.remove('played');
+    } else {
+        selectedNumbers.push(selectedValue);
+        this.classList.add('played');
+    }
+
+    if (selectedNumbers.length === +selectedGame) {
+        tasksEl.style.display = 'block';
+    } else {
+        tasksEl.style.display = 'none';
+    }
+})
