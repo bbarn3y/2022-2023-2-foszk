@@ -1,3 +1,11 @@
+<?php
+include_once('memberstorage.php');
+$ms = new MemberStorage();
+
+$members = $ms->findAll();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
