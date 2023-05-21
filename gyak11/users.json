@@ -1,0 +1,12 @@
+[
+  {
+    "username": "test_user",
+    "password": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "roles": ["user"]
+  },
+  {
+    "username": "admin",
+    "password": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "roles": ["admin", "user"]
+  }
+]

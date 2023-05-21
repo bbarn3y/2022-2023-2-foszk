@@ -1,0 +1,43 @@
+{
+    "Poppy seed roll": [
+        "poppyseed",
+        "sugar",
+        "milk",
+        "egg",
+        "yeast",
+        "flour"
+    ],
+    "Gingerbread": [
+        "flour",
+        "sugar",
+        "egg",
+        "honey",
+        "butter",
+        "bakingsoda"
+    ],
+    "Coconut balls": [
+        "coconut",
+        "sugar",
+        "vanilla",
+        "butter",
+        "milk",
+        "biscuit"
+    ],
+    "Tiramisu": [
+        "mascarpone",
+        "coffee",
+        "sugar",
+        "egg",
+        "cocoa",
+        "ladyfinger"
+    ],
+    "Zserb\u00f3": [
+        "peach",
+        "milk",
+        "sugar",
+        "yeast",
+        "flour",
+        "butter",
+        "walnut"
+    ]
+}
